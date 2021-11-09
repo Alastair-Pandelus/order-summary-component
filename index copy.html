@@ -36,105 +36,104 @@
         height: 100%;
         margin: 0;
         font-family: "Red Hat Display", sans-serif;
-        font-size: 0.9em;
-        font-weight: 300;
-        background-color: var(--pale-blue);
-        background-image: Url("images/pattern-background-desktop.svg");
-        background-size: 100%;
-        background-repeat: no-repeat;
       }
-      .container {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-content: center;
-      }
-      #content > div {
+      div {
         text-align: center;
         /* border: 1px dotted grey; */
+      }
+      span {
+        /* border: 1px dotted green; */
       }
       div #plan {
         text-align: left;
       }
       .card {
+        height: 100%;
+        /*border: 1px solid black;*/
         width: 300px;
         background-color: var(--very-pale-blue);
-        border-radius: 10px;
-        margin: auto;
+        border-radius: 15px;
       }
       #order-summary {
-        font-size: 1.4em;
-      }
-      #order-summary,
-      #annual-plan,
-      #button {
+        font-size: 1.2em;
         font-weight: 700;
+        margin: 10px;
       }
       #content {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        text-align: center;
+        margin: 30px;
       }
-      #content > div {
-        margin: 10px 0px;
+      #info {
+        margin: 10px;
+        font-size: 0.8em;
+        font-weight: 300;
       }
       #icon {
         width: 20%;
-        background-color: #d6e1ff;
       }
       #mid {
-        margin: 0px;
         width: 60%;
         display: flex;
         flex-direction: column;
         align-items: left;
-        padding-left: 20px;
       }
       #change {
         width: 20%;
-        text-decoration: underline;
       }
       #button {
-        height: 2.5em;
+        width: 80%;
         color: white;
+        margin: 10px auto;
+        padding: 7px;
         background-color: var(--bright-blue);
+        font-weight: 600;
+        font-size: 0.7em;
         border-radius: 10px;
         filter: drop-shadow(0px 3px 3px var(--desaturated-blue));
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
       }
       .image {
         width: 100%;
-        border-radius: 10px 10px 0px 0px;
+        border-radius: 20px 20px 0px 0px;
       }
       #cancel {
+        padding: 10px;
         font-weight: 600;
+        font-size: 0.7em;
       }
       #plan {
+        background-color: var(--pale-blue);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 10px;
-        background-color: #d6e1ff;
+        border-radius: 10px;
+      }
+      #music {
+        background-color: var(--pale-blue);
+        border-radius: 10px;
+      }
+      #annual-plan {
+        font-weight: 600;
+        font-size: 0.7em;
+        text-align: left;
+      }
+      #cost {
+        font-weight: 300;
+        font-size: 0.7em;
+        text-align: left;
       }
       #change {
         display: flex;
         align-items: center;
+        font-weight: 300;
+        font-size: 0.7em;
       }
       a:link {
         text-decoration: underline;
       }
-      #change,
-      #button,
-      #cancel {
-        cursor: pointer;
-      }
     </style>
   </head>
   <body>
-    <div class="container">
+    <div wrapper>
       <div class="card">
         <div id="header">
           <img class="image" src="images/illustration-hero.svg" />
@@ -146,24 +145,26 @@
             any device anywhere you like!
           </div>
           <div id="plan">
-            <img id="icon" src="images/icon-music.svg" />
-            <div id="mid">
+            <span id="icon">
+              <img id="music" src="images/icon-music.svg" />
+            </span>
+            <span id="mid">
               <div id="annual-plan">Annual Plan</div>
               <div id="cost">$59.99/year</div>
-            </div>
+            </span>
             <a id="change">Change</a>
           </div>
           <div id="button">Proceed to Payment</div>
           <div id="cancel">Cancel Order</div>
         </div>
       </div>
+    </div>
 
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Alastair Pandelus</a>.
-      </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Alastair Pandelus</a>.
     </div>
   </body>
 </html>
